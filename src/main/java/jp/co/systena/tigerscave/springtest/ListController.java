@@ -64,15 +64,15 @@ public class ListController {
   private Map<Integer, Item> getItemListMap() {
     // TODO 自動生成されたメソッド・スタブ
     ListService service = new ListService();
-    List<Item> itemList = service.getItemList();
+    List<Item> ItemList = service.getItemList();
 
     // 商品一覧をMapに入れ直し
-    Map<Integer, Item> itemListMap = new HashMap<Integer, item>();
+    Map<Integer, Item> ItemListMap = new HashMap<Integer, item>();
     for (item item : itemList) {
-      itemListMap.put(item.getItemid(), item);
+      ItemListMap.put(item.getItemid(), item);
     }
 
-    return itemListMap;
+    return ItemListMap;
   }
 
   @RequestMapping(value = "/list", method = RequestMethod.POST) // URLとのマッピング
